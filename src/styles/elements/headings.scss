@@ -1,0 +1,16 @@
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  font: 400 var(--font-size-h1) var(--font-tertiary);
+}
+
+h2 {
+  font: 400 var(--font-size-h2) var(--font-secondary);
+}
+
+h3 {
+  font: 700 var(--font-size-h3) var(--font-secondary);
+}
