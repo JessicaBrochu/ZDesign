@@ -1,0 +1,23 @@
+
+.button{
+  display: inline-block;
+  text-align: center;
+  width:180px;
+  height:45px;
+  border: 2px var(--color-black) solid;
+
+  p{
+    font: 700 var(--font-size-content) var(--font-primary);
+    color: var(--color-black);
+    margin: 0;
+    padding: 10px 0;
+  }
+}
+
+.button:hover{
+  background-color: var(--color-black);
+
+  p{
+    color: var(--color-white);
+  }
+}

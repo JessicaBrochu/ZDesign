@@ -358,6 +358,7 @@ template {
 
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
@@ -409,12 +410,11 @@ a:hover {
   }
 }
 
-header {
-  padding-top: 30px;
-}
 header .wrapper {
+  height: 80px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header nav ul {
   display: flex;
@@ -424,23 +424,20 @@ header nav ul li {
   list-style: none;
   color: var(--color-black);
   margin-left: 25px;
-  z-index: 10;
-}
-header .header__brand {
-  padding-top: 5px;
 }
 header #hamburger {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   header nav {
     height: 100vh;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.85);
     width: 100vw;
     position: fixed;
     top: 0;
     left: 100%;
     transition: 300ms;
+    z-index: 100;
   }
   header nav li {
     padding: 30px 0;
@@ -457,6 +454,7 @@ header #hamburger {
     align-items: center;
     justify-content: center;
     height: 100%;
+    z-index: 110;
   }
   header #hamburger {
     display: block;
@@ -466,6 +464,7 @@ header #hamburger {
     transform: rotate(0deg);
     transition: 0.5s ease-in-out;
     cursor: pointer;
+    z-index: 110;
   }
   header #hamburger span {
     display: block;
@@ -477,28 +476,133 @@ header #hamburger {
     left: 0;
     transform: rotate(0deg);
     transition: 0.2s ease-in-out;
+    z-index: 110;
   }
 }
 header #hamburger span:nth-child(1) {
   top: 0;
+  z-index: 110;
 }
 header #hamburger span:nth-child(2), header #hamburger span:nth-child(3) {
   top: 12px;
+  z-index: 110;
 }
 header #hamburger span:nth-child(4) {
   top: 24px;
+  z-index: 110;
 }
 header #hamburger.open span:nth-child(1),
 header #hamburger.open span:nth-child(4) {
   top: 12px;
   width: 0;
   left: 50%;
+  z-index: 110;
 }
 header #hamburger.open span:nth-child(2) {
   transform: rotate(45deg);
+  z-index: 110;
 }
 header #hamburger.open span:nth-child(3) {
   transform: rotate(-45deg);
+  z-index: 110;
+}
+
+.hero {
+  color: var(--color-black);
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+}
+.hero img {
+  object-fit: cover;
+  object-position: 0 -250px;
+}
+.hero span {
+  font: 700 var(--font-size-content) var(--font-secondary);
+  letter-spacing: 5px;
+}
+.hero .hero__content {
+  position: absolute;
+  top: 0;
+  right: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(30%);
+}
+.hero .wrapper {
+  height: 100%;
+}
+.hero .hero__buttons {
+  display: flex;
+}
+.hero .button {
+  margin: 50px;
+}
+.hero h1 {
+  padding-top: 20px;
+}
+.hero p.or {
+  transform: translateY(45px);
+}
+@media screen and (max-width: 1600px) {
+  .hero img {
+    object-position: -200px -250px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .hero img {
+    object-position: -400px -250px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero img {
+    object-position: -500px -250px;
+  }
+  .hero .hero__content {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero .hero__buttons {
+    display: inline-block;
+  }
+  .hero h1 {
+    font-size: 3.25rem;
+    padding: 35px 0;
+  }
+  .hero .button {
+    margin: 0;
+  }
+  .hero p.or {
+    transform: translate(75px, 0);
+  }
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  width: 180px;
+  height: 45px;
+  border: 2px var(--color-black) solid;
+}
+.button p {
+  font: 700 var(--font-size-content) var(--font-primary);
+  color: var(--color-black);
+  margin: 0;
+  padding: 10px 0;
+}
+
+.button:hover {
+  background-color: var(--color-black);
+}
+.button:hover p {
+  color: var(--color-white);
 }
 
 /*# sourceMappingURL=main.css.map */
