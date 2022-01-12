@@ -1,0 +1,32 @@
+
+.competitive-edge{
+
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+
+  .competitive-edge__media{
+
+    width: 50%;
+    position: relative;
+
+    img{
+      object-fit: cover;
+      width: 100%;
+    }
+
+    div{
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      p{
+        padding: 0 20px;
+        color: var(--color-white);
+        font-weight: 700;
+      }
+    }
+  }
+}

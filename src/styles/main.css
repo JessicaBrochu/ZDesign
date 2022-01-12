@@ -377,6 +377,7 @@ body {
 
 h1, h2, h3 {
   margin: 0;
+  color: var(--color-black);
 }
 
 h1 {
@@ -514,8 +515,10 @@ header #hamburger.open span:nth-child(3) {
   height: 80vh;
 }
 .hero img {
-  object-fit: cover;
-  object-position: 0 -250px;
+  position: absolute;
+  right: 0;
+  top: -250px;
+  height: 150%;
 }
 .hero span {
   font: 700 var(--font-size-content) var(--font-secondary);
@@ -546,20 +549,13 @@ header #hamburger.open span:nth-child(3) {
 .hero p.or {
   transform: translateY(45px);
 }
-@media screen and (max-width: 1600px) {
-  .hero img {
-    object-position: -200px -250px;
-  }
-}
 @media screen and (max-width: 1400px) {
   .hero img {
-    object-position: -400px -250px;
+    right: auto;
+    left: -400px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .hero img {
-    object-position: -500px -250px;
-  }
   .hero .hero__content {
     left: 50%;
     transform: translateX(-50%);
@@ -606,9 +602,6 @@ header #hamburger.open span:nth-child(3) {
 
 .solving-problems {
   padding: 10vh 0;
-}
-.solving-problems h2, .solving-problems h3 {
-  color: var(--color-black);
 }
 .solving-problems h2 {
   text-align: center;
@@ -663,6 +656,31 @@ header #hamburger.open span:nth-child(3) {
   .solving-problems h2 {
     font-size: 2.25rem;
   }
+}
+
+.competitive-edge {
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.competitive-edge .competitive-edge__media {
+  width: 50%;
+  position: relative;
+}
+.competitive-edge .competitive-edge__media img {
+  object-fit: cover;
+  width: 100%;
+}
+.competitive-edge .competitive-edge__media div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.competitive-edge .competitive-edge__media div p {
+  padding: 0 20px;
+  color: var(--color-white);
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main.css.map */

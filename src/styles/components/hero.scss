@@ -6,8 +6,10 @@
   height: 80vh;
 
   img{
-    object-fit: cover;
-    object-position: 0 -250px;
+    position: absolute;
+    right: 0;
+    top: -250px;
+    height: 150%;
   }
 
   span{
@@ -46,25 +48,15 @@
       transform: translateY(45px);
   }
 
-  @media screen and (max-width: 1600px){
-
-    img{
-      object-position: -200px -250px;
-    }
-  }
-
   @media screen and (max-width: 1400px){
 
     img{
-      object-position: -400px -250px;
+      right: auto;
+      left: -400px;
     }
   }
 
   @media screen and (max-width: 1024px){
-
-    img{
-      object-position: -500px -250px;
-    }
 
     .hero__content {
       left: 50%;
