@@ -10,4 +10,11 @@
   --font-size-h1: 4.5rem;
   --font-size-h2: 3rem;
   --font-size-h3: 1rem;
+  --font-size-h4: 1.25rem;
+
+  @media screen and (max-width: 620px){
+    h2{
+      font-size: 2.25rem;
+    }
+  }
 }
