@@ -386,6 +386,7 @@ h1 {
 
 h2 {
   font: 400 var(--font-size-h2) var(--font-secondary);
+  letter-spacing: -0.1px;
 }
 
 h3 {
@@ -524,18 +525,19 @@ header #hamburger.open span:nth-child(3) {
   font: 700 var(--font-size-content) var(--font-secondary);
   letter-spacing: 5px;
 }
-.hero .hero__content {
+.hero .wrapper {
+  height: 100%;
+  position: relative;
+}
+.hero .wrapper .hero__content {
   position: absolute;
   top: 0;
-  right: 250px;
+  right: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.hero .wrapper {
-  height: 100%;
 }
 .hero .hero__buttons {
   display: flex;
@@ -601,7 +603,7 @@ header #hamburger.open span:nth-child(3) {
 }
 
 .solving-problems {
-  padding: 10vh 0;
+  padding: 15vh 0;
 }
 .solving-problems h2 {
   text-align: center;
@@ -659,18 +661,23 @@ header #hamburger.open span:nth-child(3) {
 }
 
 .competitive-edge {
-  height: 90vh;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 725px;
+  max-width: 100%;
   overflow: hidden;
-  display: flex;
 }
 .competitive-edge .competitive-edge__media {
-  width: 50%;
+  width: 100%;
+  background-image: url("/src/images/windows.jpeg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
 }
 .competitive-edge .competitive-edge__media img {
-  object-fit: cover;
   width: 100%;
+  position: absolute;
 }
 .competitive-edge .competitive-edge__media div {
   position: absolute;
@@ -681,6 +688,18 @@ header #hamburger.open span:nth-child(3) {
   padding: 0 20px;
   color: var(--color-white);
   font-weight: 700;
+  text-align: center;
+}
+.competitive-edge .competitive-edge__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.competitive-edge .competitive-edge__content img {
+  width: 32%;
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

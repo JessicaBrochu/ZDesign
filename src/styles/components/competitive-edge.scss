@@ -1,20 +1,25 @@
 
 .competitive-edge{
 
-  height: 90vh;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 725px;
+  max-width: 100%;
   overflow: hidden;
-
-  display: flex;
 
   .competitive-edge__media{
 
-    width: 50%;
+    width: 100%;
+    background-image: url("/src/images/windows.jpeg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 
+
     img{
-      object-fit: cover;
       width: 100%;
+      position: absolute;
     }
 
     div{
@@ -26,7 +31,22 @@
         padding: 0 20px;
         color: var(--color-white);
         font-weight: 700;
+        text-align: center;
       }
+    }
+  }
+
+  .competitive-edge__content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    img{
+      width: 32%;
+      padding-top: 20px;
     }
   }
 }
