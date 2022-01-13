@@ -679,17 +679,15 @@ header #hamburger.open span:nth-child(3) {
   background-size: cover;
   position: relative;
 }
-.competitive-edge .competitive-edge__media img {
-  width: 100%;
-  position: absolute;
-}
 .competitive-edge .competitive-edge__media div {
-  position: absolute;
-  top: 50%;
-  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .competitive-edge .competitive-edge__media div p {
   padding: 0 20px;
+  margin: 0;
   color: var(--color-white);
   font-weight: 700;
   text-align: center;
@@ -704,6 +702,20 @@ header #hamburger.open span:nth-child(3) {
 .competitive-edge .competitive-edge__content img {
   width: 32%;
   padding-top: 20px;
+}
+@media screen and (max-width: 1533px) {
+  .competitive-edge .competitive-edge__content img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .competitive-edge {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .competitive-edge .competitive-edge__media div p {
+    font-weight: 400;
+  }
 }
 
 .distance-learning {

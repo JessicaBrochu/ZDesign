@@ -16,19 +16,15 @@
     background-size: cover;
     position: relative;
 
-
-    img{
-      width: 100%;
-      position: absolute;
-    }
-
     div{
-      position: absolute;
-      top: 50%;
-      left: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       p{
         padding: 0 20px;
+        margin: 0;
         color: var(--color-white);
         font-weight: 700;
         text-align: center;
@@ -49,4 +45,34 @@
       padding-top: 20px;
     }
   }
+
+  @media screen and (max-width: 1533px){
+
+    .competitive-edge__content{
+
+      img{
+        width: 50%;
+      }
+    }
+
+  }
+
+  @media screen and (max-width: 1080px){
+
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    .competitive-edge__media{
+
+      div{
+
+        p{
+          font-weight: 400;
+        }
+      }
+
+    }
+  }
+
+
 }
