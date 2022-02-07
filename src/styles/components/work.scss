@@ -1,0 +1,46 @@
+
+.work{
+
+  text-align: center;
+
+  h2{
+    padding: 80px 0 30px 0;
+  }
+
+  .work__grid{
+
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    div{
+      width: 100%;
+      height: 300px;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .button{
+    margin: 50px;
+  }
+
+  @media screen and (max-width: 1024px){
+
+    .work__grid{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 750px){
+
+    .work__grid{
+      grid-template-columns: 1fr;
+    }
+  }
+}
