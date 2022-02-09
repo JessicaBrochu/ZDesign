@@ -429,6 +429,12 @@ header .wrapper {
   justify-content: space-between;
   align-items: center;
 }
+header .header__brand img {
+  transition: opacity 250ms ease-out;
+}
+header .header__brand img:hover {
+  opacity: 50%;
+}
 header nav ul {
   display: flex;
   padding: 0;
@@ -494,9 +500,6 @@ header #hamburger {
   }
   header nav li {
     padding: 30px 0;
-  }
-  header .header__brand {
-    padding-top: 0;
   }
   header nav.menu-open {
     left: 0;
