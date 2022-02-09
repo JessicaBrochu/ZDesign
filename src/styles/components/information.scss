@@ -12,20 +12,4 @@
     color: var(--color-white);
     padding-bottom: 50px;
   }
-
-  .reverse{
-    border: 2px var(--color-white) solid;
-
-    p{
-      color: var(--color-white);
-    }
-  }
-
-  .reverse:hover{
-    background-color: var(--color-white);
-
-    p{
-      color: #000;
-    }
-  }
 }
