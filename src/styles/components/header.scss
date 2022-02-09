@@ -18,8 +18,58 @@ header{
             li{
               list-style: none;
               color: var(--color-black);
-              margin-left: 25px;
+              margin-left: 35px;
+              position: relative;
+
+              &::before{
+                content:"";
+                height: 1px;
+                width: 73%;
+                background-color: var(--color-blue);
+                position: absolute;
+                bottom: 0;
+                right: -5px;
+                display: block;
+                transform: scaleX(0);
+                transition: transform 200ms ease-in;
+                transform-origin: left;
+              }
+
+              &::after{
+                content:"";
+                height: 1px;
+                width: 73%;
+                background-color: var(--color-blue);
+                position: absolute;
+                bottom: 0;
+                left: -5px;
+                display: block;
+                transform: scaleX(0);
+                transition: transform 200ms ease-in;
+                transform-origin: right;
+
+              }
             }
+
+          li:hover{
+
+            a:hover{
+              transition: color 250ms ease-out;
+            }
+
+            &::before{
+              transform: scaleY(1);
+              transform-origin: left;
+              transition: transform 200ms ease-out;
+            }
+
+            &::after{
+              transform: scaleY(1);
+              transform-origin: right;
+              transition: transform 200ms ease-out;
+            }
+          }
+
         }
     }
 
