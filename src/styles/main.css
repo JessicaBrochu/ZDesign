@@ -572,7 +572,7 @@ header #hamburger.open span:nth-child(3) {
 .hero img {
   position: absolute;
   right: 0;
-  top: -250px;
+  top: -230px;
   height: 150%;
 }
 .hero span {
@@ -1008,7 +1008,7 @@ header #hamburger.open span:nth-child(3) {
   background: rgba(0, 0, 0, 0);
 }
 .work .work__grid .work__content:hover:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .work .button {
   margin-top: 50px;
