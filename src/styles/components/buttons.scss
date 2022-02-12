@@ -1,101 +1,59 @@
-
-.button{
-  display: inline-block;
-  text-align: center;
+.button {
   width: 180px;
-  height:45px;
-  border: 2px var(--color-black) solid;
-  position: relative;
-  margin: 0;
+  height: 45px;
+  border: var(--color-black) solid 2px;
+  font: 700 var(--font-size-content) var(--font-primary);
   color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 300ms ease-in-out;
+  z-index: 1;
 
-  p{
-    font: 700 var(--font-size-content) var(--font-primary);
-    margin: 0;
-    padding: 10px 0;
+  a {
+    color: inherit;
   }
 
-  &::before{
-    content:"";
+  &::before {
+    content: "";
+    z-index: -1;
     position: absolute;
+    right: 0;
     top: 0;
     left: 0;
+    bottom: unset;
+    height: 0;
     width: 100%;
+    opacity: 1;
+    transition: 300ms ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    bottom: 0;
+    top: unset;
     height: 100%;
-    background-color: var(--color-black);
-    transform: scaleY(0);
-    transition: transform 350ms ease-in;
-    transform-origin: top;
-  }
-}
-
-.button__contact{
-  &::after{
-    content:"CONTACT";
-    display: inline-block;
-    font: 700 var(--font-size-content) var(--font-primary);
-    position: absolute;
-    top: 10px;
-    left: 50px;
-    transition: color 350ms ease-in-out;
-  }
-}
-
-.button__aboutus{
-  &::after{
-    content:"ABOUT US";
-    display: inline-block;
-    font: 700 var(--font-size-content) var(--font-primary);
-    position: absolute;
-    top: 10px;
-    left: 48px;
-    transition: color 350ms ease-in-out;
-  }
-}
-
-.button:hover::before{
-
-  transform: scaleX(1);
-  transition: transform 350ms ease-out;
-  transform-origin: bottom;
-}
-
-.button__contact:hover::after{
-
-  z-index: 1;
-  color: var(--color-white);
-}
-
-.button__aboutus:hover::after{
-
-  z-index: 1;
-  color: var(--color-white);
-}
-
-
-
-.button__reverse{
-  border: 2px var(--color-white) solid;
-  color: var(--color-white);
-
-  &::before{
-    background-color: var(--color-white);
   }
 
-  &::after{
-    content:"ABOUT US";
-    display: inline-block;
-    font: 700 var(--font-size-content) var(--font-primary);
-    position: absolute;
-    top: 10px;
-    left: 48px;
-    transition: color 350ms ease-in-out;
+  &.primary {
+    &::before {
+      background: var(--color-black);
+    }
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  &.secondary {
+    border-color: var(--color-white);
+    color: var(--color-white);
+    
+    &::before {
+      background: var(--color-white);
+    }
+    &:hover {
+      color: var(--color-black);
+    }
   }
 }
-
-.button__reverse:hover::after{
-
-  z-index: 1;
-  color: var(--color-black);
-}
-

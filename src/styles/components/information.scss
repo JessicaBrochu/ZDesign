@@ -12,4 +12,9 @@
     color: var(--color-white);
     padding-bottom: 50px;
   }
+
+  .button__container{
+    display: flex;
+    justify-content: center;
+  }
 }
