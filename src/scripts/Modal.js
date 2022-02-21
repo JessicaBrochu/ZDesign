@@ -30,7 +30,7 @@ export default class Modal{
             const closeBtn = document.createElement("i");
             closeBtn.setAttribute("class", "fas fa-times closeBtn");
             closeBtn.onclick = () => {
-                modal.remove();
+            modal.remove();
             };
             modal.append(newImage, closeBtn);
         };
