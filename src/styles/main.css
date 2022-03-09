@@ -1028,38 +1028,6 @@ header #hamburger.open span:nth-child(3) {
   }
 }
 
-.user-reviews {
-  text-align: center;
-  height: 75vh;
-}
-.user-reviews h2 {
-  padding: 100px 0 60px 0;
-}
-.user-reviews .user-reviews__flex {
-  display: flex;
-  justify-content: center;
-}
-.user-reviews .user-reviews__flex div {
-  width: 550px;
-}
-.user-reviews .user-reviews__flex div img {
-  border-radius: 100%;
-}
-.user-reviews .user-reviews__flex div p {
-  color: var(--color-black);
-  margin: 35px 0;
-}
-.user-reviews .user-reviews__flex div span {
-  font: 800 1.875rem var(--font-secondary);
-  text-transform: uppercase;
-  color: var(--color-black);
-}
-@media screen and (max-width: 500px) {
-  .user-reviews {
-    height: 85vh;
-  }
-}
-
 .modal {
   z-index: 10;
   width: 100%;
@@ -1095,6 +1063,7 @@ header #hamburger.open span:nth-child(3) {
 footer {
   background-color: var(--color-dark-gray);
   height: 200px;
+  margin-top: 80px;
 }
 footer .footer__flex {
   height: 200px;
