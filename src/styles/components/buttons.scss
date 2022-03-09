@@ -13,7 +13,7 @@
   cursor: pointer;
 
   a {
-    color: inherit;
+    color: var(--color-black);
     padding: 10px 45px;
   }
 
@@ -39,23 +39,35 @@
   }
 
   &.primary {
+    
     &::before {
       background: var(--color-black);
     }
     &:hover {
-      color: var(--color-white);
+
+      a{
+        color: var(--color-white);
+      }
+      
     }
   }
 
   &.secondary {
     border-color: var(--color-white);
-    color: var(--color-white);
+    
+    a{
+      color: var(--color-white);
+    }
     
     &::before {
       background: var(--color-white);
     }
     &:hover {
-      color: var(--color-black);
+
+      a{
+        color: var(--color-black);
+      }
+      
     }
   }
 }
