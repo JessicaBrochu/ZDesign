@@ -59,6 +59,10 @@ header{
                 transition: transform 200ms ease-in;
                 transform-origin: right;
               }
+
+              a{
+                color: var(--color-black);
+              }
             }
 
           li:hover{
