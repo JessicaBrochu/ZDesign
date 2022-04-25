@@ -755,7 +755,7 @@ header #hamburger.open span:nth-child(3) {
 }
 .competitive-edge .competitive-edge__media {
   width: 100%;
-  background-image: url("/src/images/windows.jpeg");
+  background-image: url("images/windows.jpeg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -839,10 +839,9 @@ header #hamburger.open span:nth-child(3) {
 }
 
 .statistics {
-  background-image: url("/src/images/office.jpg");
+  background-image: url("images/office.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: red;
   height: 400px;
   color: var(--color-white);
   background-position: 0 -350px;
